@@ -1,0 +1,50 @@
+/* src/assets/theme.css */
+
+/* 亮色主题变量 */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --card-bg: #f6f6f6;
+  --border: #ddd;
+  --primary: #409eff;
+  --nav-active: #32417b;
+}
+
+/* 暗色主题变量 */
+html[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #e8e8e8;
+  --card-bg: #2a2a2a;
+  --border: #444;
+  --primary: #66aaff;
+  --nav-active: #32417b;
+}
+
+/* 全局样式 */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s linear, color 0.25s linear;
+}
+
+/* 全局“丝滑切换” — 推荐使用有限属性而非所有属性以降低重绘开销 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* 只对可能改变的视觉属性添加过渡：背景色、文字色、边框色、阴影、SVG 填充/描边 */
+  transition: background-color 0.20s linear,
+              color 0.20s linear,
+              border-color 0.20s linear,
+              box-shadow 0.20s linear,
+              fill 0.20s linear,
+              stroke 0.20s linear;
+}
+
+/* 可访问性：如果用户偏好减少动画，禁用这些过渡 */
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after,body {
+    transition: none !important;
+    animation: none !important;
+  }
+}
