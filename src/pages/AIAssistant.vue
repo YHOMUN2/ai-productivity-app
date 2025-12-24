@@ -2,103 +2,105 @@
 import { ref, nextTick, onMounted, computed } from "vue";
 import { chatWithAI } from "@/api/ai";
 import { useChatStore } from "@/stores/chat";
+import ChatWindow from "@/components/ChatWindow.vue";
 
 const chat = useChatStore();
-const input = ref("");
 const loading = ref(false);
+const chatWindowRef = ref(null);
+const typingMessageIndex = ref(-1);
 
-// 聊天区域 DOM
-const chatBox = ref(null);
-
-// 滚动到最底部
-async function scrollToBottom() {
-  await nextTick();
-  if (chatBox.value) {
-    chatBox.value.scrollTop = chatBox.value.scrollHeight;
-  }
-}
-
-// 从不同返回格式中提取 AI 文本的辅助函数
 function extractAIText(res) {
   try {
     if (!res) return "[无回应]";
-
     if (res.data && typeof res.data.answer === "string") return res.data.answer;
-
     const choices = res.data && res.data.choices;
     if (Array.isArray(choices) && choices.length) {
       const msg = choices[0].message || choices[0];
       const content = msg.content;
-      // 如果 content 是数组（分片），拼接所有 text
       if (Array.isArray(content)) return content.map((c) => c.text || c).join("");
-      // 如果 content 是字符串（你的真实响应就是这种），优先返回
       if (typeof content === "string") {
-        // 如果存在 reasoning_content，一并返回（可选）
         if (msg.reasoning_content && typeof msg.reasoning_content === "string") {
           return content + "\n\n" + msg.reasoning_content;
         }
         return content;
       }
       if (content && typeof content.text === "string") return content.text;
-      // 兼容：有时回复在 msg.reasoning_content
       if (msg.reasoning_content && typeof msg.reasoning_content === "string") return msg.reasoning_content;
     }
-
     if (res.data && res.data.data && typeof res.data.data.answer === "string") return res.data.data.answer;
-
     return "[无回应]";
   } catch (e) {
     return "[解析返回出错]";
   }
 }
 
-// 发送消息到大模型并处理回复
-async function send() {
-  const text = input.value.trim();
+async function handleSendMessage(inputText) {
+  const text = inputText.trim();
   if (!text || loading.value) return;
-
   chat.addUser(text);
-  input.value = "";
-  scrollToBottom();
-
+  await nextTick();
   loading.value = true;
-
   try {
-    const res = await chatWithAI([
-      {
-        role: "user",
-        content: text
-      }
-    ]);
-
+    chat.addAI("");
+    const aiMessageIndex = chat.current.messages.length - 1;
+    typingMessageIndex.value = aiMessageIndex;
+    const res = await chatWithAI([{ role: "user", content: text }]);
     const aiText = extractAIText(res);
-    chat.addAI(aiText);
+    if (chat.current && aiMessageIndex < chat.current.messages.length) {
+      chat.current.messages[aiMessageIndex].text = aiText;
+    }
   } catch (e) {
-    chat.addAI("AI 服务异常");
+    const errorIndex = chat.current?.messages.length - 1;
+    if (errorIndex >= 0) {
+      chat.current.messages[errorIndex].text = "❌ AI 服务异常，请稍后重试";
+    }
     console.error("chatWithAI error:", e);
+  } finally {
+    loading.value = false;
+    typingMessageIndex.value = -1;
+    if (chatWindowRef.value) {
+      await nextTick();
+      chatWindowRef.value.scrollToBottom();
+    }
   }
+}
 
-  loading.value = false;
-  scrollToBottom();
+function handleSaveConversation() {
+  const current = chat.current;
+  if (!current) return;
+  const conversation = JSON.stringify(current, null, 2);
+  const element = document.createElement("a");
+  element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(conversation));
+  element.setAttribute("download", `conversation-${current.id}.json`);
+  element.style.display = "none";
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
 }
 
 onMounted(() => {
-  scrollToBottom();
+  if (!chat.currentId) {
+    chat.createChat();
+  }
 });
 
 const currentMessages = computed(() => {
-  return (chat.current && Array.isArray(chat.current.messages)) ? chat.current.messages : [];
+  if (!chat.current || !Array.isArray(chat.current.messages)) return [];
+  return chat.current.messages.map((msg, idx) => ({
+    ...msg,
+    isTyping: !loading.value && idx === typingMessageIndex.value && msg.role === "ai",
+    timestamp: msg.timestamp || Date.now()
+  }));
 });
 
 function newChat() {
   chat.createChat();
-  // small delay to let UI update
-  setTimeout(() => scrollToBottom(), 50);
+  typingMessageIndex.value = -1;
 }
 
 function selectChat(id) {
   chat.selectChat(id);
-  setTimeout(() => scrollToBottom(), 50);
+  typingMessageIndex.value = -1;
 }
 
 function removeChat(id) {
@@ -113,198 +115,48 @@ function formatTime(ts) {
 </script>
 
 <template>
-  <div class="ai-shell">
-    <!-- 左侧会话栏 -->
-    <aside class="sidebar">
-      <div class="sidebar-top">
-        <button class="new-chat" @click="newChat">＋ 新聊天</button>
+  <div class="ai-assistant-page">
+    <aside class="conversation-sidebar">
+      <div class="sidebar-header">
+        <el-button type="primary" size="large" class="new-chat-btn" @click="newChat">
+          ➕ 新对话
+        </el-button>
       </div>
-
-      <div class="chat-list">
-        <div
-          v-for="c in chat.chats"
-          :key="c.id"
-          class="chat-item"
-          :class="{ active: c.id === chat.currentId }"
-          @click="selectChat(c.id)"
-        >
-          <div class="title">{{ c.title }}</div>
-          <div class="meta">{{ formatTime(c.createdAt) }}</div>
-          <button class="del" @click.stop="removeChat(c.id)">×</button>
+      <div class="conversation-list">
+        <div v-for="conv in chat.chats" :key="conv.id" :class="['conversation-item', { active: conv.id === chat.currentId }]" @click="selectChat(conv.id)">
+          <div class="conv-title">{{ conv.title }}</div>
+          <div class="conv-meta">{{ formatTime(conv.createdAt) }}</div>
+          <el-button type="danger" text size="small" class="delete-btn" @click.stop="removeChat(conv.id)" icon="Delete" />
         </div>
-        <div v-if="!chat.chats.length" class="empty">暂无会话，点击“新聊天”开始</div>
+        <div v-if="!chat.chats.length" class="empty-state">暂无对话<br />点击"新对话"开始</div>
       </div>
     </aside>
-
-    <!-- 右侧主区：聊天 -->
-    <div class="ai-container">
-      <!-- 聊天内容区 -->
-      <div class="chat-box" ref="chatBox">
-        <div v-for="(msg, i) in currentMessages" :key="i">
-          <!-- 用户消息 -->
-          <div v-if="msg.role === 'user'" class="bubble user">
-            {{ msg.text }}
-          </div>
-
-          <!-- AI 消息 -->
-          <div v-else class="bubble ai">
-            {{ msg.text }}
-          </div>
-        </div>
-
-        <!-- AI 正在回复 -->
-        <div v-if="loading" class="bubble ai">
-          正在生成...
-        </div>
-      </div>
-
-      <!-- 输入区 -->
-      <div class="input-area">
-        <input
-          v-model="input"
-          @keyup.enter="send"
-          placeholder="输入内容..."
-          autofocus
-        />
-        <button @click="send" :disabled="loading">发送</button>
-      </div>
-    </div>
+    <main class="chat-main">
+      <ChatWindow ref="chatWindowRef" :messages="currentMessages" :is-loading="loading" @send="handleSendMessage" @save-conversation="handleSaveConversation" />
+    </main>
   </div>
 </template>
 
 <style scoped>
-.ai-container {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 60px);
-  padding: 10px;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.chat-box {
-  /* 不再强制填满剩余高度，而是根据内容自适应，但限制最大高度，避免挤压输入区 */
-  flex: 0 1 auto;
-  max-height: calc(100vh - 10px);
-  overflow-y: auto;
-  padding: 10px;
-  padding-bottom: 80px; /* 为固定在底部的输入区预留空间，避免最后一条被遮挡 */
-}
-
-.bubble {
-  max-width: 70%;
-  border-radius: 8px;
-  padding: 10px 14px;
-  margin-bottom: 12px;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.user {
-  background-color: #409eff;
-  color: white;
-  margin-left: auto;
-}
-
-.ai {
-  background: #e8e8e8;
-  color: #333;
-  margin-right: auto;
-}
-
-.input-area {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background: #fff;
-  position: sticky;
-  bottom: 0;
-  z-index: 20;
-}
-
-input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-button {
-  padding: 10px 18px;
-  border: none;
-  background: #409eff;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:disabled {
-  opacity: 0.6;
-}
-</style>
-
-<style scoped>
-.ai-shell {
-  display: flex;
-  height: calc(100vh - 60px);
-}
-
-.sidebar {
-  width: 260px;
-  border-right: 1px solid #eee;
-  background: linear-gradient(180deg, #fafafa, #fff);
-  padding: 12px;
-  box-sizing: border-box;
-}
-
-.sidebar-top {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 12px;
-}
-
-.new-chat {
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: none;
-  background: #2d8cf0;
-  color: white;
-  cursor: pointer;
-}
-
-.chat-list { max-height: calc(100vh - 140px); overflow: auto; }
-.chat-item {
-  padding: 8px 10px;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  background: transparent;
-  cursor: pointer;
-  position: relative;
-}
-.chat-item.active { background: #f0f6ff; }
-.chat-item .title { font-size: 13px; color: #333; }
-.chat-item .meta { font-size: 11px; color: #999; margin-top: 4px; }
-.chat-item .del { position: absolute; right: 8px; top: 8px; border: none; background: transparent; color: #999; cursor: pointer; }
-.empty { color: #888; padding: 16px; font-size: 13px; }
-
-.ai-container { flex: 1; display: flex; flex-direction: column; }
-.chat-box { flex: 0 1 auto; max-height: calc(100vh - 220px); overflow-y: auto; padding: 18px; padding-bottom: 80px; }
-.input-area { display: flex; gap: 10px; padding: 14px; border-top: 1px solid #eee; background: #fff; position: sticky; bottom: 0; z-index: 20; }
-
-.bubble { max-width: 70%; border-radius: 10px; padding: 12px 16px; margin-bottom: 12px; white-space: pre-wrap; word-break: break-word; }
-.user { background-color: #409eff; color: white; margin-left: auto; }
-.ai { background: #e4f0fd; color: #222; margin-right: auto; }
-
-/* 更醒目的主区顶部样式（参考图片的中央搜索风格） */
-.ai-container::before {
-  content: "你好，光田云恒。";
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  color: #32417b;
-  margin: 18px 0 6px 0;
-}
-
+.ai-assistant-page { display: flex; height: calc(100vh - 60px); background: var(--bg-base); }
+.conversation-sidebar { width: 280px; background: var(--bg-surface); border-right: 1px solid var(--border-color); display: flex; flex-direction: column; overflow: hidden; transition: all 0.2s ease; }
+.sidebar-header { padding: var(--spacing-md); border-bottom: 1px solid var(--border-color); }
+.new-chat-btn { width: 100%; height: 40px; font-size: 14px; font-weight: 500; border-radius: var(--radius-md); transition: all 0.15s ease; }
+.new-chat-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.conversation-list { flex: 1; overflow-y: auto; padding: var(--spacing-sm); display: flex; flex-direction: column; gap: var(--spacing-xs); }
+.conversation-list::-webkit-scrollbar { width: 4px; }
+.conversation-list::-webkit-scrollbar-track { background: transparent; }
+.conversation-list::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 2px; }
+.conversation-list::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+.conversation-item { padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-md); cursor: pointer; background: transparent; transition: all 0.15s ease; position: relative; }
+.conversation-item:hover { background: var(--hover-bg); }
+.conversation-item.active { background: var(--accent-light); color: var(--accent); }
+.conv-title { font-size: 13px; font-weight: 500; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; }
+.conversation-item.active .conv-title { color: var(--accent); }
+.conv-meta { font-size: 11px; color: var(--text-tertiary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.delete-btn { position: absolute; right: var(--spacing-sm); top: 50%; transform: translateY(-50%); opacity: 0; transition: opacity 0.15s ease; }
+.conversation-item:hover .delete-btn { opacity: 1; }
+.empty-state { color: var(--text-tertiary); font-size: 12px; text-align: center; padding: var(--spacing-lg); line-height: 1.8; }
+.chat-main { flex: 1; display: flex; flex-direction: column; padding: var(--spacing-md); overflow: hidden; }
+@media (max-width: 768px) { .ai-assistant-page { flex-direction: column; } .conversation-sidebar { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid var(--border-color); } .chat-main { flex: 1; } }
 </style>

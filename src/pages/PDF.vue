@@ -409,6 +409,10 @@ function resetPDF() {
   background: linear-gradient(135deg, #f5f7ff 0%, #fffaf0 100%);
 }
 
+html[data-theme="dark"] .upload-area {
+  background: #0F1724;
+}
+
 .welcome-section {
   text-align: center;
   padding: 40px;
@@ -420,6 +424,10 @@ function resetPDF() {
   color: #1a1a1a;
   margin: 0 0 16px 0;
   letter-spacing: 2px;
+}
+
+html[data-theme="dark"] .title {
+  color: #FFFFFF;
 }
 
 .subtitle {

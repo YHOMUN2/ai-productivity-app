@@ -64,10 +64,10 @@ const activeNote = computed(() => store.notes.find(n => n.id === store.activeId)
       <div v-if="store.notes.length === 0">暂无笔记，点击“新建”开始</div>
 
       <ul style="list-style:none; padding:0; margin:0;">
-        <li v-for="n in store.notes" :key="n.id" :style="{ padding:'8px', borderRadius:'6px', background: n.id === store.activeId ? '#eef' : 'transparent', cursor:'pointer', marginBottom:'6px' }" @click="select(n)">
+        <li v-for="n in store.notes" :key="n.id" :data-title="n.title" :style="{ padding:'8px', borderRadius:'6px', background: n.id === store.activeId ? '#eef' : 'transparent', cursor:'pointer', marginBottom:'6px' }" @click="select(n)">
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <div style="flex:1; min-width:0;">
-              <div style="font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color: #000 !important;">{{ n.title || '无标题' }}</div>
+              <div class="note-title">{{ n.title || '无标题' }}</div>
               <div style="font-size:12px; color:#666; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ (n.content || '').slice(0, 60) }}</div>
             </div>
             <div style="margin-left:8px; display:flex; gap:6px;">
@@ -105,9 +105,18 @@ const activeNote = computed(() => store.notes.find(n => n.id === store.activeId)
   font-size: 12px;
   cursor: pointer;
   transition: background 0.2s;
-  
 }
+
 .blue-btn:hover {
   background: #0f4e97;
 }
+
+.note-title {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #396097;
+}
+
 </style>

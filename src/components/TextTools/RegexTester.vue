@@ -43,10 +43,18 @@ const result = computed(() => {
   background: #fafafa;
 }
 
+html[data-theme="dark"] .tool-card {
+  background: #13315C;
+}
+
 textarea {
   width: 100%;
   height: 100px;
   margin: 8px 0;
+}
+
+html[data-theme="dark"] textarea {
+  background: #8DA9C4;
 }
 
 .row {
@@ -61,5 +69,9 @@ textarea {
   padding: 8px;
   border-radius: 6px;
   min-height: 60px;
+}
+
+html[data-theme="dark"] .result-box {
+  background: #8DA9C4;
 }
 </style>

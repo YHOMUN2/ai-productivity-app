@@ -38,11 +38,19 @@ function capitalize() {
   background: #fafafa;
 }
 
+html[data-theme="dark"] .tool-card {
+  background: #13315C;
+}
+
 textarea {
   width: 100%;
   height: 120px;
   margin-bottom: 10px;
   padding: 8px;
+}
+
+html[data-theme="dark"] textarea {
+  background: #8DA9C4;
 }
 
 .buttons {

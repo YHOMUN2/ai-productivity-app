@@ -1,49 +1,110 @@
-/* src/assets/theme.css */
+﻿/* src/assets/theme.css - 完整主题系统 */
 
-/* 亮色主题变量 */
+/* 亮色主题（默认） */
 :root {
-  --bg: #ffffff;
-  --text: #222;
-  --card-bg: #f6f6f6;
-  --border: #ddd;
-  --primary: #409eff;
-  --nav-active: #32417b;
+  --bg-base: #f5f7fa;
+  --bg-surface: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --text-inverse: #ffffff;
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
+  --border-dark: #d1d5db;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-active: #3730a3;
+  --accent-light: #e0e7ff;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  --disabled-text: #d1d5db;
+  --disabled-bg: #f3f4f6;
+  --hover-bg: #f9fafb;
+  --active-bg: #f3f4f6;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --el-bg-color: #ffffff;
+  --el-bg-color-page: #f5f7fa;
+  --el-text-color-primary: #1f2937;
+  --el-text-color-regular: #6b7280;
+  --el-border-color: #e5e7eb;
+  --el-color-primary: #4f46e5;
+  --el-fill-color-light: #f5f7fa;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 }
 
-/* 暗色主题变量 */
+/* 暗色主题 */
 html[data-theme="dark"] {
-  --bg: #1e1e1e;
-  --text: #e8e8e8;
-  --card-bg: #2a2a2a;
-  --border: #444;
-  --primary: #66aaff;
-  --nav-active: #32417b;
+  --bg-base: #0f1724;
+  --bg-surface: #2b3547;
+  --bg-secondary: #2f4063;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --text-inverse: #1f2937;
+  --border-color: #374151;
+  --border-light: #323f52;
+  --border-dark: #4b5563;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --accent-active: #a5b4fc;
+  --accent-light: #312e81;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --info: #60a5fa;
+  --disabled-text: #6b7280;
+  --disabled-bg: #27303f;
+  --hover-bg: #1f2937;
+  --active-bg: #374151;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --el-bg-color: #1a202c;
+  --el-bg-color-page: #21314b;
+  --el-text-color-primary: #f3f4f6;
+  --el-text-color-regular: #d1d5db;
+  --el-border-color: #374151;
+  --el-color-primary: #6366f1;
+  --el-fill-color-light: #1f2937;
 }
 
-/* 全局样式 */
+html {
+  background: var(--bg-base);
+  color: var(--text-primary);
+}
+
 body {
-  background: var(--bg);
-  color: var(--text);
-  transition: background-color 0.25s linear, color 0.25s linear;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* 全局“丝滑切换” — 推荐使用有限属性而非所有属性以降低重绘开销 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  /* 只对可能改变的视觉属性添加过渡：背景色、文字色、边框色、阴影、SVG 填充/描边 */
-  transition: background-color 0.20s linear,
-              color 0.20s linear,
-              border-color 0.20s linear,
-              box-shadow 0.20s linear,
-              fill 0.20s linear,
-              stroke 0.20s linear;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-/* 可访问性：如果用户偏好减少动画，禁用这些过渡 */
 @media (prefers-reduced-motion: reduce) {
-  *,*::before,*::after,body {
+  *,
+  *::before,
+  *::after,
+  body {
     transition: none !important;
     animation: none !important;
   }
