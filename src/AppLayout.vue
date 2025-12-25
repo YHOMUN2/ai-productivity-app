@@ -5,7 +5,7 @@
       <div class="header-content">
         <!-- 左侧：Logo 与应用名称 -->
         <div class="header-left">
-          <div class="logo">⚡</div>
+          <img class="logo" src="/vite.svg" alt="Logo" />
           <h1 class="app-title">AI 效率工作台</h1>
         </div>
 
@@ -28,11 +28,11 @@
 
           <a
             class="icon-btn"
-            href="http://localhost:4000/"
+            href="https://yhomun2.github.io/MYBLOG/"
             target="_blank"
             rel="noopener noreferrer"
-            title="访问服务器"
-            aria-label="访问服务器"
+            title="访问光田云恒博客"
+            aria-label="访问光田云恒博客"
           >
             🔗
           </a>
@@ -182,9 +182,11 @@ watch(
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1;
   flex-shrink: 0;
+  width: 24px;
+  height: 24px;
 }
 
 .app-title {

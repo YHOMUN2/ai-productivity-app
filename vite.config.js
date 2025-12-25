@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 
 export default defineConfig({
+  base: "/ai-productivity-app/",
   plugins: [vue()],
 
   resolve: {
@@ -11,3 +12,4 @@ export default defineConfig({
     }
   }
 });
+
