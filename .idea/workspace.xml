@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1d1541d-fc1a-4e5a-a29e-74a7891b21d9" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.vite/deps/_metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/chunk-VYFZJ6WO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/chunk-VYFZJ6WO.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/pinia-plugin-persistedstate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/pinia-plugin-persistedstate.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/pinia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/pinia.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/vue-router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/vue-router.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vite/deps/vue.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/architecture.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/AUTHENTICATION_TESTING_GUIDE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/BUTTON_FIX_COMPLETE_REPORT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/BUTTON_FIX_QUICK_TEST.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/BUTTON_FIX_SUMMARY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/BUTTON_FIX_VERIFICATION.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/CODE_UPDATE_SUMMARY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/COMPLETION_CHECKLIST.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/CONSOLE_ERRORS_QUICK_FIX.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/CONSOLE_ERROR_FIX.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/DISABLE_EMAIL_VERIFICATION.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/ERROR_HANDLING_COMPLETION_REPORT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/ERROR_HANDLING_IMPROVEMENTS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/ERROR_HANDLING_INDEX.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/ERROR_HANDLING_SUMMARY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/ERROR_HANDLING_TEST_GUIDE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/GET_STARTED.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/IMPLEMENTATION_SUMMARY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/LOGIN_BUTTON_FIX.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/OFFICIAL_QUICKSTART.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/PROFILES_AUTH_QUICK_REF.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/PROFILES_TABLE_SETUP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/QUICK_ACTION.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/QUICK_REFERENCE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/QUICK_START_FIX.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/SUPABASE_AUTH_INTEGRATION.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/SUPABASE_CONFIG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/SUPABASE_CONNECT_CHECKLIST.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/SUPABASE_IMPLEMENTATION_COMPLETE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/SUPABASE_TROUBLESHOOTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/SUPABASE_快速开始.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/TASK_2.4_CHECKLIST.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/TESTING_GUIDE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/USER_MENU_GUIDE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/md-file/配置Supabase.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/06/f6/d586e5dbc6fda3a451feeecad0e745ff749f0a36e1a92d227270f9997113d87008a2f609300f5e128d49f3e6bf156ffeec66a15817478dc863a571238ffd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/07/58/1635913c4ad1a3a1c2071a7cd21fedaa3f8f6b8728bd8ef9301147b0c8c9a22edb50379198d865a6d646a13bc64be4b2a02cd5145ed869506ef5126bbdf4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/09/cc/b43652e4cebd04c7614abe1d97f8ec844475c9f3c5c9d4c5edb08f72f5f19ec656976954cfcc1091070231164391b8e6feb81a9ebbe46a9e98184c465151" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/0a/08/b5696e0114667d3076e92a540aaee9ad9e8a3e0c46b4b066694b0a24efb47a1d44f9c96c3a35d6171d82ead94b1c13acab02c2c7e0f8db5a3eafb76848e1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/0a/f8/eba5431c3cd1b1a223e21a1ef9e6b411928b41ab48fdb9c9580c3471d9a533f4158951d80fc361b97f64b3a41dd8643d33d317c51f567d0de0c78f52fc7d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/10/24/b9b1e0e88dd2c15b5439b2e1e9d4ce3344b58311459aacab2d9413be9a56277c714a72a3acfb83a3ef93f9ad21afe89349e0a5e407fb7bda48140a9eb8ab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/12/8d/a0a332c345169067d534606f74a2eac190a134af5bfc8294c07685a935e796f640eabcc3d398668a32db33aae8160443ddd4467e6b01e70e46a866d94d8d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/14/eb/d0d183c3e4d39f3e03332628684fe65ae697640c959c6e9ba3d438da29922bfe0c687508d8fee5841654cda96dae8171d488bf25450830eb777328765d79" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/15/d5/9bc5ffd5b08ba922af15c5bede73eff1e4e91ea1fe37ecfd69c1b77566679c911d4211fb42c58b3967095cd58dcbc24f20436f4130241e1de1468365610d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/20/66/b9157774d37520d6a0199b213cc05dec27cd7118b4aa4eab50ea36957e4799e22e644b69b0405eb5ca156aa234677a755ec393e574bc9182f765e1862e4b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/27/cc/7ff9f02546d7f9b76029a3c43c960234a1c7afcecf2b1219560c52a7796787359a0657587250b34bf3167b668259f47ba5b7bc63a8c09f7e808103fc5901" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/2a/56/91c127c50347c3ef73d854c1e3e7f89716d40609c5fb3d2c7415d430604130f5bdb0a8cec6c5a758fb9630726b8485a9668c507f62fa9aa0d545fac59496" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/2c/34/fa45f1bf11f5abf2a48e625a38f9b9ec6bf5ef6196172736bc09b79caef95716962077503cc589314c21b6baff85be5e1f54d463eec79fa4a5dd979da643" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/2c/7a/42f3bd755456650da6145c405b141090ec64b775553d9a33a184c8573fab714d5e04858420fca1a742ebedfec3c0b6850aabb5555272fa995b45a0be36b0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/34/2e/ca6a2133050b31b4a194a1c77b52757bc6d3610e40e43bdef7a9324e0303c046a2f1214b7e52d13717ed4b3bdefc2498c7f91095b19668fabad274629f3c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/36/ab/ab650548d72ac453ea361900f0495ae95a1db964430cbce22137e823f2ea7d100fbc14dffeb80875441935c69eb38b505e885dcb1459f85d029b2ae6ffba" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/37/80/39c2ee2a10e96a31271473fc03cf4bc1e3ba1e631a25f7d33e57f770c3e753c49145d62acedbbe296152b5a67862f223e6c1a84994f0bb1a4272e9315998" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/37/c4/5be53253482609f6261d6d93c9d20e3de1d794f908a261aa7ded33800ed85adb593a25c4694ea6467c7e11f5d1c8d43ca1b6b478d4ed27f2685bc5328a70" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/38/e7/210e087817609c84e5fde1c455aa1bf2edbdc015bfbfad05f2b309b39866a445f90c8285958df9cb5a4462adf2c47ee0f8cac556d7a797cf0b778c723328" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/3b/32/2e4da21f0bc41710f989bc1e18e24c37e2b497742273c5c0f59054ad06fafc6cae97d73400603a3408d323a239df4ea450089d08ee9ae512b728462113d8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/3c/42/06098e6d4a552de7472ac8c5df0b35fea0e3ea374bee1aa5b36dc276c6f9e4ce4ab8ea83a9cfb7506930c175f2026f8375e3e1804540f0d97576378b6fce" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/3d/2d/ddced4abcc5276e57ddc8d2716bbe160c1318ee32f3ac761849f0bd58c8738bebacba3280843293c5a05f435904350200ce5d78b678ce0dc887843a25876" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/3d/4f/39806ca2876287e469dd47150d50531a1e11d509ec980f86d6a1e745ec44e1bdaffc0163d78344bbe72aa1cca04333d3c17135e4e86c1b37b205e28d1713" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/44/b5/d81c4789a8430fd34ac3f7c9a28459de0ac1877883337c290fd4441dcf00263303b85e3e5555034c1c9852510c2a275196e5a7a7b599cf327cd054b4f14b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/46/93/33d2404071e7c48f40d4a6befad2b0e3b470e84d8984395fb7c130c2588ff0d358bf8e1bac8e3937c8bc323f544acb7c2fd932c18d1c162121e4c30a8546" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/48/84/d257a6885ecb95355ddfdced1fda7fdc8321035a84aab5931888099cb181f275c2ab3b3de053107f89777f41fd3cf88657e0aa6035bbd474c0665b3fa470" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/4e/15/45e83095840f24506cbe69acc543891743b1354f2ec0df2a4539ed0870957c3bf339d751bdf405b6e22acaad6e7a5ade38c86f7e8a3f056aaa011a4b815e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/50/a1/6ebb4a22005318b98a7ec23fbbfa06eaadcbf15bdf26b5b72f7e30f53ea8912fe365c8fdc1e7e1fa326ac0af9372755e0e0add64f90806ba8988ceb8bd63" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/58/af/6a4a8cf15ce0fb649425a52a8e4fea26d997dc4f8c8efb4dc5bb30070f4c05e92d25d34f742d13c3c77be14d32d9f1c14aa419fe20e7155caeaa39c2257d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/5a/3e/fe10943c992b97af68967e7ba3ae2994df94765b814012b1324e626827bb9cc139f684e512b117a131be514989315c64cced8f50a6f3e6a7efb0e5fb6827" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/5b/ad/3d6ee2d545599e5baf77c4a7f31de215ea72461b3f7cb823df79723510b30b5d578a619f66d797c03126943c11d82c616c55170c9920a4b103ab655f4160" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/5c/46/b0a75b748314a2f71d3582592d459e470f2d075eaaccd31e695d033df04688d0dc4eea354cee89833b1b2e128e542004809e6d9b469d49b7f7b46b65d4f1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/5c/4b/9e682e6031ee4db9f3587c187d90fc0994fe4cd9ff8e82bf2bbe19910c064d1e063a988df94429180e28ddf76a4c70d33b83ca54509a2ff77506527a9fcb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/66/f6/e531fb7cb0bcf14f33b4ee8026550d801162671d0abf72293a3504d797907b4577b3460526a938dd0b74cfa05dbe08c1df6edb6d85c195b0232926e48da0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/67/3f/9a6564a3f0b13ace8c43fb1ae387855f9081bc61ae8bbd8919aad5101893d98d8979df2a42694c16aa8ede234c7ae8a046791a3e9a504490c49e499dfc37" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/68/64/f16e96e0f3f6f925f5351d74ab6c7df05d9b8b3c970d11c65014cc4bb37a12ce0b55bba9c53e46db18652f05c523295d98c81f56c7169ba3e1c41fdb5c45" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/68/c3/af7c36f66b9daee8f5fa8ebae3bc00875c6577cec3a5591cd9b1320e0096b484e56f469d350300b5fa72d3194cf1cdecde8eb61e097f8a9e7335c47765fb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/68/f1/2d61e21279883426d132834d3e47b4bdc5cc0419a45f72fd914255329662b8431f2800388dd5ab37d5cc1d22935432571e866021808a7c0723cebbea9bcf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/6c/a5/635dc12c9e84d3109472751ded5875df1a3272739b668ed981a0fa69ecb48dba5a82c935ac11c6f0ec5acc6ca1ad64eb2cda0a5e8cd55d4b6969b7e5504d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/6c/d5/4a6db95f846917d9d506433a63b88afa5f5ac0cf3ddc7d62c3dbce077efae13ed0fac3ba043a0b6aa01716e46ca6fdc0a89cd22f419fc7c57a16ae395b0b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/76/52/ecd9ff3a86d9cd0112ddbf29ff7b385fcbf925ecb42052f26dadbec1d209c34ebbeb388540e9913471b11eb023c59b347f3e0dbaec4735d91ac7d15543bb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/80/e2/879241f4307f0e5a82afac4d57ac9a294e7152edd7234c37cce8e9991e85f545996c735b8d146092668b171ca3639638f4b661454f0a895195085cf04fde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/82/ea/32dba25092d5cf733fb49f71ae916232fc90cd2ad8bdbfa54432eea4576b1806c5ae1a24d4f0e59d83e0037d46c7837ff70e5ab24837bb266747ae4b62c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/83/89/9dc2427429bbbde04a85c3b65bfb633f70a7d7b64551591c32ee1d8762de3a9a7296b1268a7ef90d2df47c571eadef8bf583d7f0ffe48230abbf791eb45a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/83/d8/199e75d5abb80ceefded242595feac3bc3e29e3a5487021805f51cad17289f5ba005eb585d4f6b9cad884fabd84bb39248af27aea47577a8693de5d1fda3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/88/26/d567c9ca1cd7a8d3fbcce8e9d09cfee915a18124179ed8c3270c81e4267ef6e043f57009496e0e54c0f1c453a7f53bbfce6dea419cd17bdf1ced29e6a2b1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/97/e0/39d25aa21382255584145cb78ce787e2e9423f33ac06415c194ca1cbc117f22af67bb20a76243d5daaaa8ef41d0ef1a69e88c7e472188a8e811bef04b1d0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/99/f8/03c1d648a8bb3b15f1ac552077789cbd685f5c0801612d9d1bb8bb0c1ccd2794926e1e85622d75a005586f79154c42a7dc4ec4c1df639d9d69904ce68e01" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/9c/c6/413b0bb369b50ed272e021c73aaf271911e6c5e9e7947da890c7df964a4f1edbd21b2ef3d4f5f788eada96e244e8de1be8600264321f27f03d1fb884a986" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/a0/91/6ef781d06fe29576e49440bef09e99aa9df98bb0e03f9c087a6fa107d30084a0ad3f98f79753a737c0a0d5f373243ae1cf447b525ca294f7d2016b34bfdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/a0/df/62bdefff4120647f5f6b7c3bf8e4cede64f8b47845f2961b7638b11789cbb96f82a84353b35c8c3ec434865b14b17b52667a9451fd91f6f37becbb9d7cfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/a1/6b/2e1c8e355a705a09de2da69793f825b0bcfdc852366ba0ad9704730ce19b250f43d00818fa575acfb6c22aed9ea7977477e618ff6fd7a664e9e3a8a31bb9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/a1/b2/be4610f650912283540705499c0e7ad45068ddd7800a13caf08ecfa7aee6bbd707057ba01c30f054e545e08152fdd85d2529ea32549d4f6ac389b0a1c9eb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/aa/3c/52f9204286fa8297a954e928629622cc37a5aa1478974043586c063718a35f946f854b78ea9fc26642ad02059ab892816ab22f79353d4ce922f8c2165fac" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/ae/4a/5eef55b43747345f3e900f4789113b960091a727d69fb25d6cae6c0fac8fb20429207b91327175db611caf2f6f7365551640263b2273d10afdc60d7b9937" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/ae/d9/c634611cc2c67e1655e9e6cf7b308d82903938e6fd91bc55482968fb8dbc23a6d9e5506e9035b44d51ec7d82bf69232dd9fc049cf0caa3233bc9c618aa90" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/ae/df/f483b0755ee8f603cf9862d30a67d7238833d50314fce3bf88cfe3b27ed43a5e2e8bb0aad0cec02a9386d040fa0ba22cac889968e19ae46318420c29d541" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/b0/69/ef6f9766ac968a119f8b0c8a60baf757ddb0e5125966bf8fc2950f5ac1c98266b971e63432c8c58533990123e13234e0830e22a4f22974cdeb97dd9960ff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/b7/91/1c2d54ba40f04da8cdb3f1f6a493f34a7a5f97cec860b7c1452809feab0943d69cd95b18749d50abbc52bb6436fa5ee719785f73f02ec20564d121502903" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/ba/af/03f267501dcb642eb8fb5d88e6a9c5400e0b75bb66d134e2320d4be220c6a78b6d8616e2d0c50da26d6dcaeb413dc3ba5239d2c1f5ea3ba44bbae94fb2a5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/bf/69/0311ee7b95e713ba568322e3533f2dd1cb880b189e99d4edef13592b81764daec43e2c54c61d5c558dc5cfb35ecb85b65519e74026ff17675b6f8f916f4a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/c2/25/99773f1631a77c2d0749316603676489b593f933032acd0ab77a1b56da782223751381b2a216bbcc5144b72800e25659382e219f3830769ab631ef0d9ff3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/d0/d8/1fb4751c578bf7e158579bc40149fb4a557b5b9011b75620a3b3af9e2796bacba322fe388518f735b02ed02bef411615ab51113710e820996692c4bf4ecd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/d5/d8/554195e17078deefbf7c21533ec68a3fd597557f338c21cf3fae05528a344adfc103a8e2681ae95af4dffc648e510fc413c4d42d2bf1a8ce9afea94a9144" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/da/5a/319007d7bee734c74224ade02a872e01e1784ef40fee248d93e04706a23854b6ccbd8797e6263d56f477fc1112e8b8f370aba23522c826816f745ff19bf8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/dc/a8/aba6131bea60a698bfab2c81a256b9cc4da8233ffa887195cdeea5eab6b03596767f9e90e24103f55bded159836c8d051d9deb75b4fc35b74ad00f9a1050" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/de/fb/20d105e11d145b5d8bd89263513e5c7baae10a5128c79c4accb02a474a9e702be939441c8cc6138d0533f98a7bbb0fa87ab5435c4cf35f372705942d1872" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/e1/f1/6f019ac29f50d834733a2b64c74b6737bfd44ebc2931883b5967f529d156e638505537a34b5cc3eeb555b233e67cd736734c9e89635b173213c20f91aa68" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/e5/3e/b12ce804f04ee77f76092a4e2ab9c00643488cb489e90ebfa9899cf81fd6dcf7722f093f18b27db73e8f99212fc3f77175df08bef68919ad0796a4406e00" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/eb/32/9c5e87e4fccff811ab68ee2aa9461f81faf9f17a24ee98220ff93cf6eb112a222cb0cc3f49c47abeb9d46b0eebfa85713ea667adbc977c9f9c1c7f830545" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/ec/78/478ed1118ea94d6d9b6a36acb6adc90dfd2a4e3a59839627adfa53fb93e78a6448cf9370e0c9e53d9485cb75e2f3d2e05b6d5a7ef50768c3dc095a0c307e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/f8/b7/a9773fc093058e072bda0362a4c21ef2049109d9b9f45cd78bd2be0bc27d5711fa32ebcb186979129311752fec9db590cc24ca694a8008155cb5599ffeda" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/content-v2/sha512/fd/bd/1f2abc55f62ed134e117327a3f235f3ad91b1886e528f90ea6eb3ddaaf57f8ba54cc5e70dfbf4cb8618c4ad8f39c82b39740e80a610c75780af26f236fb6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/04/bb/e70e70e0cbc9b00841927b0c23c58d97f21063208f3e872c3e04db58c13b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/07/2f/c26409f0f3f5f0a9723c9865acfaf682ce8a5f593e491d912d58f53f9ae7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/07/bf/9896566da12b1648e112e12e8d3febd1654b36d1aafbbed26a51a05ec74f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/07/f4/b75816f4b5ad5803be57071fe968be8a3cc6c09c227de900b35dce0659c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/0a/09/800a1f139a09ca1588e413eabd7b05e7042e2b95ed82b65740ec97a9103b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/10/18/7671d0203eb9f633196e88eead9235ca41f0631c0703b079e23e236820af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/1b/8b/a4e0455daf3307b3bb9bf85888b57b5e0756fe249e84b1012ed693d7ebec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/20/fe/72158ef3616508f9d61100e53b325f0c7e21080aade007f4a4663d144f58" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/27/11/47cb43463fbe42b5e7f11814172fa4523bd50ac531606c03b9e5873c477d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/27/cc/afd4aa090b087c509f17e75196209f498c916da50ee4e9f26bd8424fd6f7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/2b/8d/dd08a6aa9021803757fc8cd0b6f76b3cde7cdaf19d115a0e7a9d2ca191c1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/2d/16/ca47e82017b40c8d4619941e113ba66ea83d324904d7a1be4002293fabcb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/2d/cd/ce8d9581eab87ae867bf88f3f1c53c7693ccc82531092fc40597e47e61c1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/2e/0e/798bbbc08b6b4d4a59bb4760a63320226bf01e5313d0b26987b9c664eb06" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/31/ed/c46db02a73172d92f5734448049a294b9cfd7d259e85e9b009b6fe78780d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/34/0d/5b75aa241eb1dd4df96a81b1c91d0b70aa5de5ff2986268774ba9e8aaa38" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/3d/04/3c0003073b9e34376e9163095ea6ce972bf51be9810240ca5a745d038638" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/3d/91/2759c484a1ddcdd1188dbe3893ee47ecc741746cde066a709b235b2742b5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/3e/49/fc9a5a5b33508297834c9a4acf4d4de5b46348df8093fa7d0a6f82aba3d5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/40/b0/bcfdeb1a718c413e74ccbb56def2c8dd3328c6af15d85aff00484e2117d2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/4d/49/2852e82623f9b35d0953bf15495f791cbd850bfab874074c47839a5b4f1a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/4d/d9/0782c466d6920beb484e4aa41937c533e19a8e44ce163900df07e69bf06a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/4e/66/1be0574b31181ed64f53aa4e46f05ee656c8b31f24e8d76eb025efb88b15" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/50/1f/07b02a93b8d7573ed9ba644c3e99de3db9615f3f1caba0dc9b9d102deb4e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/58/f0/4fe556f104b09be642895a82afa463fe560d9a0dc8f507efeef825a6905e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/59/65/8db5feb061f537878733937fbe4407f9de0a8d9f7faddb0000eaa4ae0a42" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/5c/63/f8dbbae7a25f16394e1f9a386635e49376548ce2f01d33e3d82e504fab34" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/66/84/e4483f4a9813c2c44eab5946b91a42ecefc9c6403d74fb204b020f2d8a81" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/67/65/8d77cc578248d8960c0a71462590bc1f51328f192e15c729f7e73b0b4427" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/67/7d/0b50dc4c09555fc922ccf43c46994f1a0a5ff47dc0a5d5cf41437ac2d3e6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/67/b1/ee2de7537921649398bee17a68cb575269e264c6486b686037e9807908cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/76/96/caf40670924ade04c72fbb0d548047701e498eaf61e1aad968b02e8044ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/77/40/3494fcfc8c7b23ff3cd1a0fbba53ae221b27d0cf5ef94982d7fcd3140b2c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/77/53/5ecc27c416037f9850834068aae06cf10d2c0165ca101d8529198a53e91c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/79/59/6c45923ce18845666d9d7e9db974d08f195cb98f2f84ed20c743d46aa407" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/7b/ca/84a0edfbac76fcfba84a3719dad24739b7d3654ab30651edbb362b232db5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/7b/d3/42787f4c5bfa791203100dd67529d40f5cbd67fdfb6fb2f24e74b0516a52" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/7d/e8/5446c5cdae0493e4ad3b10347b77c8df4b17b5fbe14834f5c6b06faa9f95" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/89/0b/e2ba88ed525834b932f3ddb5624a540e279742a3c6851ec4ee466890a5ed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/8e/ef/c57a8150fc039b53ddfd89567644a73a2f82f2407dcd5fbd707d21d00cec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/91/03/66d801727f470b3150943079d3cb01c05bcea9a75c397ab0193a61253c7f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/95/e0/e8b38998c0340b44572ede7c48fe097d159e0a3072caf1a96ff70c714ca7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/96/11/69c757b3aef38554c6118e883b27dc1301590026949725a841e66155fffe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/96/c0/b0f9b5540f4411a70046161bbf8672c4333f852914d8848b4357e43cfb78" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/97/10/0fcf20eb29d0726bd820822f6729718464b591b0e6901217c956740e943c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/97/7e/d0486638bc53d64e82e51f051ebe374112ae06c1fdd8893f893abc446e17" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/9b/86/79fd6d0df58c93c3f02c0c723eee69eeb598f25c9d7d14852ac86021ea73" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/a1/f9/f5bf34815c25a27737fb2e2dcf8276047ad45afe0900a263b9189c866048" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/a9/f7/4c2a9fe6575921726a5579be73ddb2a3e8a7abbbb66a28c50ca8deaeccc5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/ac/ba/f22fa31b850d07f8d92263849db0d7019715081c71c9f9d45d4e901eec73" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/ad/67/3b32658a1b998a9f74e422445a762380f8d57907e03471fa01109f579ea5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/b1/4a/6796e751962cdc0f1d356f7c34ae7e66a41858d769156329b5bd4379d591" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/b4/d4/aa802aaebfa5cce97b6f2e688062d965ef9940c20866c45eb34a72b47d05" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/b6/63/238807144536cb82d714f2a1374ef3c3a03fbbfd4fa234ff083114a25f63" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/b7/18/93e1346abb1bb14845d52d1233c6ed6214b66e33ba8f97cc0308dbcac070" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/b7/7c/bef778b25c0ebbc1ec51711ea957725f5792a3e2511e72d6c71494c7dbbe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/c1/64/2ce9009c5cb99958f14593a701836b66fb0722a4d2132deea7d51490f460" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/c1/93/3515153f231242c60def5053bfc88d4537ed8e6e1ee7f9253dc1a3ad6fce" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/c2/6b/c49ef3deba9b797b0814e27e4d0471903bbcbd6d58922b488fda50632fbb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/c7/e3/9d17e44c51fac9267d4bafa162553d538891444dd79a788788b482664684" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/cc/63/e7acb558cecd1e6f519539ce8d2a0989ea63c3567ab8a4492eba26141032" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/d0/12/0e893a332c0e07c4e6ad382322604cf61f86ba7822a3e02b24d4105846cb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/d6/d8/468d68b9f073cc45b39064b5b8f07660cd7920d7a9c4383d31c1dd23672b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/e3/b5/d5213020637d59b8221aaa0db7cf69d450a0af2bb31396205dcf09a082fe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/e3/dc/739fa0c50f6baef36f35690e5e5ec46e33dc880c34ca3650b36535551b17" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/e9/bf/0bfc4abc982e4aecac42d77dbded146ef0ce46649865b55d62144af5a96d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/f0/88/bd6749c3be229f0f86890a45e82a9fefd2cfa53441ca4d65a9131ed672e8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/f0/c2/8b4da7f8797a2c4711577eeb58c60c156868f8976033b99103b74420496c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/f7/be/211292bf5c91dbeb452bf286ce7105af761c49f69e77ddf5ced55eadc4ed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/f8/41/5dac66057141ab7e227a32067f60d10f7473ffe35eca6806d650a750aaa4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/f8/e3/b21ad1e5a0e71310e412693fe84aa62f3ea13a2af140edfc7d36bbebfeb3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/f9/e7/50aa6cae0ce2b28bd3e28c01e533a9631bab7f2400211c680d8603efa6d4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_cache/_cacache/index-v5/fc/ee/fc3e1dd6706bd557d2840d92ff10cdd6928b92fb8c46d2195dfbd8d4b2be" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/supabase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SupabaseDemo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserMenu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/supabaseClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/supabase-operations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/supabaseTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supabase-diagnostic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatMessage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatMessage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatWindow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatWindow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextTools/CaseConverter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextTools/CaseConverter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextTools/JsonFormatter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextTools/JsonFormatter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextTools/RegexTester.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextTools/RegexTester.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ThemeSwitcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThemeSwitcher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AIAssistant.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AIAssistant.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Note.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Note.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PDF.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PDF.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="37I3LHTbgbOFVBj23YzErDd0xHF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.143" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="e1d1541d-fc1a-4e5a-a29e-74a7891b21d9" name="更改" comment="" />
+      <created>1766576703717</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766576703717</updated>
+      <workItem from="1766576705436" duration="272000" />
+      <workItem from="1766578328445" duration="101000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
