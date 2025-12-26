@@ -21,8 +21,6 @@ app.config.errorHandler = (err, instance, info) => {
   const pluginPatterns = [
     '/hybridaction',
     'zybTracker',
-    'v[w] is not a function',
-    'g[y] is not a function',
     'chrome-extension://',
     'A listener indicated an asynchronous response',
     'message channel closed'

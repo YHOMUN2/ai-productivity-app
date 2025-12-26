@@ -46,12 +46,6 @@ export default defineConfig({
       output: {
         // 使用函数方式进行手动分包
         manualChunks(id) {
-          // ⚠️ 注意：不拆分 Element Plus，保持完整以避免初始化顺序问题
-          // Element Plus 虽然大，但完整性比分包带来的加载顺序问题更重要
-          if (id.includes('node_modules/element-plus')) {
-            return 'element-plus';
-          }
-          
           // PDF.js 单独打包（最大的库）
           if (id.includes('pdfjs-dist')) {
             return 'pdf-js';
@@ -65,11 +59,6 @@ export default defineConfig({
           // axios 单独打包
           if (id.includes('node_modules/axios')) {
             return 'axios';
-          }
-          
-          // Vue 单独打包
-          if (id.includes('node_modules/vue')) {
-            return 'vue';
           }
         }
       }
