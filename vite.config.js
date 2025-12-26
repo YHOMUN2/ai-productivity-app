@@ -27,9 +27,18 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        // 禁用这些可能导致循环依赖问题的优化
+        // 禁用可能导致循环依赖和初始化顺序错误的优化
         reduce_vars: false,
+        reduce_funcs: false,
         inline: 1,
+        passes: 1,
+        // 禁用所有可能重排初始化的优化
+        toplevel: false,
+        arguments: false
+      },
+      mangle: {
+        // 保留某些关键字的原始名称，避免混淆导致的问题
+        keep_fnames: true
       }
     },
     
@@ -37,22 +46,10 @@ export default defineConfig({
       output: {
         // 使用函数方式进行手动分包
         manualChunks(id) {
-          // Element Plus 按组件类别分包
+          // ⚠️ 注意：不拆分 Element Plus，保持完整以避免初始化顺序问题
+          // Element Plus 虽然大，但完整性比分包带来的加载顺序问题更重要
           if (id.includes('node_modules/element-plus')) {
-            if (id.includes('components/button') || id.includes('components/form') || id.includes('components/input') || id.includes('components/select')) {
-              return 'element-form';
-            }
-            if (id.includes('components/table') || id.includes('components/tree') || id.includes('components/grid')) {
-              return 'element-table';
-            }
-            if (id.includes('components/dropdown') || id.includes('components/menu') || id.includes('components/popover') || id.includes('components/tooltip')) {
-              return 'element-menu';
-            }
-            if (id.includes('components/dialog') || id.includes('components/drawer') || id.includes('components/message')) {
-              return 'element-dialog';
-            }
-            // 其他 Element Plus 组件打包到主库
-            return 'element-plus-other';
+            return 'element-plus';
           }
           
           // PDF.js 单独打包（最大的库）

@@ -82,12 +82,24 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useUserStore } from '@/stores/user';
-import { ElMessage, ElMessageBox } from 'element-plus';
 import { User, Picture, Setting, SwitchButton } from '@element-plus/icons-vue';
 
 const router = useRouter();
 const userStore = useUserStore();
 const dropdownRef = ref(null);
+
+// 延迟导入 Element Plus 消息组件，避免循环依赖
+let ElMessage = null;
+let ElMessageBox = null;
+
+async function getElComponents() {
+  if (!ElMessage || !ElMessageBox) {
+    const { ElMessage: EM, ElMessageBox: EMB } = await import('element-plus');
+    ElMessage = EM;
+    ElMessageBox = EMB;
+  }
+  return { ElMessage, ElMessageBox };
+}
 
 /**
  * 处理菜单命令
@@ -123,6 +135,8 @@ function handleProfile() {
  * 处理修改头像
  */
 async function handleChangeAvatar() {
+  const { ElMessage: EM } = await getElComponents();
+  
   // 创建 file input 元素
   const input = document.createElement('input');
   input.type = 'file';
@@ -138,11 +152,11 @@ async function handleChangeAvatar() {
       reader.onload = (event) => {
         const dataUrl = event.target.result;
         userStore.updateAvatar(dataUrl);
-        ElMessage.success('头像更新成功');
+        EM.success('头像更新成功');
       };
       reader.readAsDataURL(file);
     } catch (err) {
-      ElMessage.error('头像上传失败');
+      EM.error('头像上传失败');
     }
   };
   
@@ -160,8 +174,10 @@ function handleSettings() {
  * 处理退出登录
  */
 async function handleLogout() {
+  const { ElMessage: EM, ElMessageBox: EMB } = await getElComponents();
+  
   try {
-    await ElMessageBox.confirm(
+    await EMB.confirm(
       '确定要退出登录吗？',
       '提示',
       {
@@ -175,11 +191,11 @@ async function handleLogout() {
     const { success, error } = await userStore.logout();
     
     if (success) {
-      ElMessage.success('已退出登录');
+      EM.success('已退出登录');
       // 跳转到登录页
       router.push('/login');
     } else {
-      ElMessage.error(error || '退出登录失败');
+      EM.error(error || '退出登录失败');
     }
   } catch (err) {
     // 用户取消确认
