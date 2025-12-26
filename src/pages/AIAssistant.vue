@@ -2,12 +2,17 @@
 import { ref, nextTick, onMounted, computed } from "vue";
 import { chatWithAI } from "@/api/ai";
 import { useChatStore } from "@/stores/chat";
+import { useUserStore } from "@/stores/user";
+import { saveChatHistory } from "@/api/chat-with-history";
 import ChatWindow from "@/components/ChatWindow.vue";
+import { ElMessage } from "element-plus";
 
 const chat = useChatStore();
+const user = useUserStore();
 const loading = ref(false);
 const chatWindowRef = ref(null);
 const typingMessageIndex = ref(-1);
+const savingToDb = ref(false);
 
 function extractAIText(res) {
   try {
@@ -49,6 +54,19 @@ async function handleSendMessage(inputText) {
     if (chat.current && aiMessageIndex < chat.current.messages.length) {
       chat.current.messages[aiMessageIndex].text = aiText;
     }
+    
+    // 自动保存到 Supabase（如果用户已登录）
+    if (user.user?.id) {
+      savingToDb.value = true;
+      try {
+        await saveChatHistory(chat.current, user.user.id);
+      } catch (error) {
+        console.error("Failed to save to Supabase:", error);
+        // 不中断用户交互，仅在后台记录错误
+      } finally {
+        savingToDb.value = false;
+      }
+    }
   } catch (e) {
     const errorIndex = chat.current?.messages.length - 1;
     if (errorIndex >= 0) {
@@ -65,17 +83,35 @@ async function handleSendMessage(inputText) {
   }
 }
 
-function handleSaveConversation() {
+async function handleSaveConversation() {
   const current = chat.current;
   if (!current) return;
-  const conversation = JSON.stringify(current, null, 2);
-  const element = document.createElement("a");
-  element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(conversation));
-  element.setAttribute("download", `conversation-${current.id}.json`);
-  element.style.display = "none";
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
+
+  try {
+    savingToDb.value = true;
+    
+    // 如果用户已登录，保存到 Supabase
+    if (user.user?.id) {
+      await saveChatHistory(current, user.user.id);
+      ElMessage.success('对话已保存到云端');
+    } else {
+      // 未登录时，仅导出为本地文件
+      const conversation = JSON.stringify(current, null, 2);
+      const element = document.createElement("a");
+      element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(conversation));
+      element.setAttribute("download", `conversation-${current.id}.json`);
+      element.style.display = "none";
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+      ElMessage.success('对话已导出为本地文件');
+    }
+  } catch (error) {
+    console.error("Save conversation error:", error);
+    ElMessage.error('保存失败，请重试');
+  } finally {
+    savingToDb.value = false;
+  }
 }
 
 onMounted(() => {
@@ -134,11 +170,15 @@ function formatTime(ts) {
     <main class="chat-main">
       <ChatWindow ref="chatWindowRef" :messages="currentMessages" :is-loading="loading" @send="handleSendMessage" @save-conversation="handleSaveConversation" />
     </main>
+    <div v-if="savingToDb" class="save-indicator">
+      <span class="spinner"></span>
+      保存中...
+    </div>
   </div>
 </template>
 
 <style scoped>
-.ai-assistant-page { display: flex; height: calc(100vh - 60px); background: var(--bg-base); }
+.ai-assistant-page { display: flex; height: calc(100vh - 60px); background: var(--bg-base); position: relative; }
 .conversation-sidebar { width: 280px; background: var(--bg-surface); border-right: 1px solid var(--border-color); display: flex; flex-direction: column; overflow: hidden; transition: all 0.2s ease; }
 .sidebar-header { padding: var(--spacing-md); border-bottom: 1px solid var(--border-color); }
 .new-chat-btn { width: 100%; height: 40px; font-size: 14px; font-weight: 500; border-radius: var(--radius-md); transition: all 0.15s ease; }
@@ -159,4 +199,7 @@ function formatTime(ts) {
 .empty-state { color: var(--text-tertiary); font-size: 12px; text-align: center; padding: var(--spacing-lg); line-height: 1.8; }
 .chat-main { flex: 1; display: flex; flex-direction: column; padding: var(--spacing-md); overflow: hidden; }
 @media (max-width: 768px) { .ai-assistant-page { flex-direction: column; } .conversation-sidebar { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid var(--border-color); } .chat-main { flex: 1; } }
+.save-indicator { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: white; padding: 12px 16px; border-radius: var(--radius-md); display: flex; align-items: center; gap: 8px; font-size: 12px; box-shadow: var(--shadow-lg); z-index: 1000; }
+.spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid rgba(255, 255, 255, 0.3); border-top-color: white; border-radius: 50%; animation: spin 0.6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
 </style>
