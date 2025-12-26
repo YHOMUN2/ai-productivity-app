@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:vercel": "vite build",
+    "build:github": "cross-env VITE_DEPLOY_ENV=github vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:github",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
+    "cross-env": "^10.1.0",
     "gh-pages": "^6.3.0",
     "terser": "^5.44.1",
     "vite": "^7.2.4"

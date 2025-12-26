@@ -3,7 +3,9 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 
 export default defineConfig({
-  base: "/ai-productivity-app/",
+  // GitHub Pages 需要子路径，Vercel 部署在根域名用 '/'
+  // 根据构建环境变量动态设置
+  base: process.env.VITE_DEPLOY_ENV === 'github' ? '/ai-productivity-app/' : '/',
   plugins: [vue()],
 
   resolve: {
