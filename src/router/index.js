@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const Home = () => import("../pages/Home.vue");
-const Login = () => import("../pages/Login.vue");
+const Login = () => import("../pages/login.vue");
 const Register = () => import("../pages/Register.vue");
 const AIAssistant = () => import("../pages/AIAssistant.vue");
 const Note = () => import("../pages/Note.vue");
