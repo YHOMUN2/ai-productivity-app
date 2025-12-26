@@ -87,12 +87,14 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, defineAsyncComponent } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useThemeStore } from '@/stores/theme'
 import { useUserStore } from '@/stores/user'
-import UserMenu from '@/components/UserMenu.vue'
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
+
+// 异步加载 UserMenu 以避免循环依赖
+const UserMenu = defineAsyncComponent(() => import('@/components/UserMenu.vue'))
 
 const router = useRouter()
 const route = useRoute()

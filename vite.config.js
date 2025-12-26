@@ -18,12 +18,18 @@ export default defineConfig({
     // 增加 chunk 大小警告限制到 2MB（只是警告，不影响打包）
     chunkSizeWarningLimit: 2000,
     
+    // 启用 source map 用于调试（可选，调试后可关闭）
+    sourcemap: false,
+    
     // 使用更好的压缩算法
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+        // 禁用这些可能导致循环依赖问题的优化
+        reduce_vars: false,
+        inline: 1,
       }
     },
     
